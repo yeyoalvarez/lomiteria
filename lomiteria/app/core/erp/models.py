@@ -2,6 +2,8 @@ from django.db import models
 
 # Create your models here.
 
+
+
 class persona(models.Model):
     id = models.DecimalField(default=0)
     ci = models.DecimalField(default=0)
@@ -10,3 +12,8 @@ class persona(models.Model):
     apellido = models.CharField(max_length=100)
     direccion = models.CharField(max_length=100)
     telefono = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.names
+
+    
